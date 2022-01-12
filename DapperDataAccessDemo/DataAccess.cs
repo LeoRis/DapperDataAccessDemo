@@ -26,5 +26,19 @@ namespace DapperDataAccessDemo
                 return output;
             }
         }
+
+        public void InsertPerson(string firstName, string lastName, string emailAddress, string phoneNumber)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("Sample")))
+            {
+                Person newPerson = new Person
+                {
+                    FirstName = firstName,
+                    LastName = lastName,
+                    EmailAddress = emailAddress,
+                    PhoneNumber = phoneNumber
+                };
+            }
+        }
     }
 }
