@@ -14,5 +14,15 @@ namespace DapperDataAccessDemo
         public string EmailAddress { get; set; }
         public string PhoneNumber { get; set; }
 
+        public string FullInfo
+        {
+            get 
+            { 
+                // "Jane Doe (jane@test.com)"
+                return $"{ FirstName } { LastName } ({ EmailAddress })"; 
+            }
+        }
+
+
     }
 }

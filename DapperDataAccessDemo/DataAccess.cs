@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
 
 namespace DapperDataAccessDemo
 {
@@ -10,7 +11,7 @@ namespace DapperDataAccessDemo
     {
         public List<Person> GetPeople(string lastName)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
