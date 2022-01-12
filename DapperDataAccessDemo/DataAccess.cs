@@ -31,13 +31,19 @@ namespace DapperDataAccessDemo
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("Sample")))
             {
-                Person newPerson = new Person
-                {
-                    FirstName = firstName,
-                    LastName = lastName,
-                    EmailAddress = emailAddress,
-                    PhoneNumber = phoneNumber
-                };
+                //Person newPerson = new Person
+                //{
+                //    FirstName = firstName,
+                //    LastName = lastName,
+                //    EmailAddress = emailAddress,
+                //    PhoneNumber = phoneNumber
+                //};
+
+                List<Person> people = new List<Person>();
+
+                people.Add(new Person { FirstName = firstName, LastName = lastName, EmailAddress = emailAddress, PhoneNumber = phoneNumber });
+
+                connection.Execute("dbo.People_Insert @FirstName, @LastName, @EmailAddress, @PhoneNumber", people);
             }
         }
     }
