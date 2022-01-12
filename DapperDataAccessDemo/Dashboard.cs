@@ -12,9 +12,17 @@ namespace DapperDataAccessDemo
 {
     public partial class Dashboard : Form
     {
+        List<Person> people = new List<Person>();
         public Dashboard()
         {
             InitializeComponent();
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+
+            people = db.GetPeople(lastNameText.Text);
         }
     }
 }
