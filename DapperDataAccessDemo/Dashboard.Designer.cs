@@ -38,33 +38,38 @@ namespace DapperDataAccessDemo
             // peopleFoundListBox
             // 
             this.peopleFoundListBox.FormattingEnabled = true;
-            this.peopleFoundListBox.ItemHeight = 25;
-            this.peopleFoundListBox.Location = new System.Drawing.Point(25, 152);
+            this.peopleFoundListBox.ItemHeight = 37;
+            this.peopleFoundListBox.Location = new System.Drawing.Point(29, 135);
+            this.peopleFoundListBox.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.peopleFoundListBox.Name = "peopleFoundListBox";
-            this.peopleFoundListBox.Size = new System.Drawing.Size(615, 254);
+            this.peopleFoundListBox.Size = new System.Drawing.Size(454, 226);
             this.peopleFoundListBox.TabIndex = 0;
             // 
             // lastNameText
             // 
-            this.lastNameText.Location = new System.Drawing.Point(200, 41);
+            this.lastNameText.Location = new System.Drawing.Point(205, 15);
+            this.lastNameText.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.lastNameText.Multiline = true;
             this.lastNameText.Name = "lastNameText";
-            this.lastNameText.Size = new System.Drawing.Size(210, 30);
+            this.lastNameText.Size = new System.Drawing.Size(128, 37);
             this.lastNameText.TabIndex = 1;
             // 
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(20, 44);
+            this.lastNameLabel.Location = new System.Drawing.Point(22, 15);
+            this.lastNameLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(106, 25);
+            this.lastNameLabel.Size = new System.Drawing.Size(173, 37);
             this.lastNameLabel.TabIndex = 2;
             this.lastNameLabel.Text = "Last Name";
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(25, 92);
+            this.searchButton.Location = new System.Drawing.Point(29, 72);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(154, 35);
+            this.searchButton.Size = new System.Drawing.Size(153, 44);
             this.searchButton.TabIndex = 3;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -72,15 +77,15 @@ namespace DapperDataAccessDemo
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1097, 804);
+            this.ClientSize = new System.Drawing.Size(624, 688);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.lastNameText);
             this.Controls.Add(this.peopleFoundListBox);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Dashboard";
             this.Text = "SQL Data Access";
             this.ResumeLayout(false);

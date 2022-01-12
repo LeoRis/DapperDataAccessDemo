@@ -17,6 +17,11 @@ namespace DapperDataAccessDemo
         {
             InitializeComponent();
 
+            UpdateBinding();
+        }
+
+        private void UpdateBinding()
+        {
             peopleFoundListBox.DataSource = people;
             peopleFoundListBox.DisplayMember = "FullInfo";
         }
@@ -26,6 +31,8 @@ namespace DapperDataAccessDemo
             DataAccess db = new DataAccess();
 
             people = db.GetPeople(lastNameText.Text);
+
+            UpdateBinding();
         }
     }
 }
