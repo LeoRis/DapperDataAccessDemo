@@ -22,6 +22,7 @@ namespace DapperDataAccessDemo
                 {
                     MessageBox.Show($"Last name: '{lastName}' was not found.");
                 }
+
                 return output;
             }
         }
