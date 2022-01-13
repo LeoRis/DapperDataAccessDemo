@@ -42,6 +42,7 @@ namespace DapperDataAccessDemo
             this.firstNameInsText = new System.Windows.Forms.TextBox();
             this.firstNameInsLabel = new System.Windows.Forms.Label();
             this.insertRecordButton = new System.Windows.Forms.Button();
+            this.removePersonButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // peopleFoundListBox
@@ -155,7 +156,7 @@ namespace DapperDataAccessDemo
             this.firstNameInsLabel.AutoSize = true;
             this.firstNameInsLabel.Location = new System.Drawing.Point(22, 399);
             this.firstNameInsLabel.Name = "firstNameInsLabel";
-            this.firstNameInsLabel.Size = new System.Drawing.Size(263, 56);
+            this.firstNameInsLabel.Size = new System.Drawing.Size(175, 37);
             this.firstNameInsLabel.TabIndex = 7;
             this.firstNameInsLabel.Text = "First Name";
             // 
@@ -170,11 +171,23 @@ namespace DapperDataAccessDemo
             this.insertRecordButton.UseVisualStyleBackColor = true;
             this.insertRecordButton.Click += new System.EventHandler(this.InsertRecordButton_Click);
             // 
+            // removePersonButton
+            // 
+            this.removePersonButton.Location = new System.Drawing.Point(295, 632);
+            this.removePersonButton.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.removePersonButton.Name = "removePersonButton";
+            this.removePersonButton.Size = new System.Drawing.Size(153, 44);
+            this.removePersonButton.TabIndex = 14;
+            this.removePersonButton.Text = "Remove";
+            this.removePersonButton.UseVisualStyleBackColor = true;
+            this.removePersonButton.Click += new System.EventHandler(this.RemovePersonButton_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 688);
+            this.Controls.Add(this.removePersonButton);
             this.Controls.Add(this.insertRecordButton);
             this.Controls.Add(this.firstNameInsLabel);
             this.Controls.Add(this.firstNameInsText);
@@ -189,7 +202,7 @@ namespace DapperDataAccessDemo
             this.Controls.Add(this.lastNameText);
             this.Controls.Add(this.peopleFoundListBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Dashboard";
             this.Text = "SQL Data Access";
             this.ResumeLayout(false);
@@ -212,6 +225,7 @@ namespace DapperDataAccessDemo
         private System.Windows.Forms.TextBox firstNameInsText;
         private System.Windows.Forms.Label firstNameInsLabel;
         private System.Windows.Forms.Button insertRecordButton;
+        private System.Windows.Forms.Button removePersonButton;
     }
 }
 
