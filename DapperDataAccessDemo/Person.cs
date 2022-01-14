@@ -19,7 +19,7 @@ namespace DapperDataAccessDemo
             get 
             { 
                 // "Jane Doe (jane@test.com)"
-                return $"{ FirstName } { LastName } ({ EmailAddress })"; 
+                return $"{ FirstName } { LastName }"; 
             }
         }
 

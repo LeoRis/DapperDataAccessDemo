@@ -16,7 +16,6 @@ namespace DapperDataAccessDemo
         public Dashboard()
         {
             InitializeComponent();
-
             UpdateBinding();
         }
 
@@ -61,7 +60,31 @@ namespace DapperDataAccessDemo
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
+            DataAccess db = new DataAccess();
 
+            db.UpdatePerson(firstNameInsText.Text, lastNameInsText.Text, emailAddressInsText.Text, phoneNumberInsText.Text);
+
+            firstNameInsText.Text = "";
+            lastNameInsText.Text = "";
+            emailAddressInsText.Text = "";
+            phoneNumberInsText.Text = "";
+        }
+
+        private void PeopleFoundListBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Person selector = (Person)peopleFoundListBox.SelectedItem;
+            
+            foreach(var person in people)
+            {
+                if(person.FirstName == selector.FirstName && person.LastName == selector.LastName)
+                {
+                    firstNameInsText.Text = selector.FirstName;
+                    lastNameInsText.Text = selector.LastName;
+                }
+            }
+
+            //var selected = peopleFoundListBox.GetItemText(peopleFoundListBox.SelectedValue);
+            //selectorLabel.Text = selected;
         }
     }
 }

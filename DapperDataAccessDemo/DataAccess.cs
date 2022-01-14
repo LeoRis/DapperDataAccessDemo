@@ -54,5 +54,13 @@ namespace DapperDataAccessDemo
                 connection.Execute($"dbo.People_Remove @FirstName = '{firstName}', @LastName = '{lastName}', @EmailAddress = '{emailAddress}', @PhoneNumber = '{phoneNumber}'");
             }
         }
+
+        public void UpdatePerson(string firstName, string lastName, string emailAddress, string phoneNumber)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("Sample")))
+            {
+                connection.Execute($"dbo.People_Update @FirstName = '{firstName}', @LastName = '{lastName}', @EmailAddress = '{emailAddress}', @PhoneNumber = '{phoneNumber}'");
+            }
+        }
     }
 }
