@@ -43,6 +43,7 @@ namespace DapperDataAccessDemo
             this.firstNameInsLabel = new System.Windows.Forms.Label();
             this.insertRecordButton = new System.Windows.Forms.Button();
             this.removePersonButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // peopleFoundListBox
@@ -173,7 +174,7 @@ namespace DapperDataAccessDemo
             // 
             // removePersonButton
             // 
-            this.removePersonButton.Location = new System.Drawing.Point(295, 632);
+            this.removePersonButton.Location = new System.Drawing.Point(439, 632);
             this.removePersonButton.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.removePersonButton.Name = "removePersonButton";
             this.removePersonButton.Size = new System.Drawing.Size(153, 44);
@@ -182,11 +183,23 @@ namespace DapperDataAccessDemo
             this.removePersonButton.UseVisualStyleBackColor = true;
             this.removePersonButton.Click += new System.EventHandler(this.RemovePersonButton_Click);
             // 
+            // updateButton
+            // 
+            this.updateButton.Location = new System.Drawing.Point(239, 632);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(153, 44);
+            this.updateButton.TabIndex = 15;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 688);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.removePersonButton);
             this.Controls.Add(this.insertRecordButton);
             this.Controls.Add(this.firstNameInsLabel);
@@ -226,6 +239,7 @@ namespace DapperDataAccessDemo
         private System.Windows.Forms.Label firstNameInsLabel;
         private System.Windows.Forms.Button insertRecordButton;
         private System.Windows.Forms.Button removePersonButton;
+        private System.Windows.Forms.Button updateButton;
     }
 }
 
