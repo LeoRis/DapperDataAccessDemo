@@ -44,7 +44,6 @@ namespace DapperDataAccessDemo
             this.insertRecordButton = new System.Windows.Forms.Button();
             this.removePersonButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
-            this.selectorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // peopleFoundListBox
@@ -196,20 +195,11 @@ namespace DapperDataAccessDemo
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
-            // selectorLabel
-            // 
-            this.selectorLabel.AutoSize = true;
-            this.selectorLabel.Location = new System.Drawing.Point(269, 76);
-            this.selectorLabel.Name = "selectorLabel";
-            this.selectorLabel.Size = new System.Drawing.Size(0, 56);
-            this.selectorLabel.TabIndex = 16;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 688);
-            this.Controls.Add(this.selectorLabel);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.removePersonButton);
             this.Controls.Add(this.insertRecordButton);
@@ -251,7 +241,6 @@ namespace DapperDataAccessDemo
         private System.Windows.Forms.Button insertRecordButton;
         private System.Windows.Forms.Button removePersonButton;
         private System.Windows.Forms.Button updateButton;
-        private System.Windows.Forms.Label selectorLabel;
     }
 }
 

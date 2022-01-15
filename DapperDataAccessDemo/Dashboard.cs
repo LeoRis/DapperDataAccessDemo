@@ -82,9 +82,6 @@ namespace DapperDataAccessDemo
                     lastNameInsText.Text = selector.LastName;
                 }
             }
-
-            //var selected = peopleFoundListBox.GetItemText(peopleFoundListBox.SelectedValue);
-            //selectorLabel.Text = selected;
         }
     }
 }
