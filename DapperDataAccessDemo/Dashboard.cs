@@ -62,6 +62,8 @@ namespace DapperDataAccessDemo
         {
             DataAccess db = new DataAccess();
 
+            // TODO Update only desired parameters of the person.
+
             db.UpdatePerson(firstNameInsText.Text, lastNameInsText.Text, emailAddressInsText.Text, phoneNumberInsText.Text);
 
             firstNameInsText.Text = "";
