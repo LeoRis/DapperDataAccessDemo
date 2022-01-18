@@ -93,5 +93,13 @@ namespace DapperDataAccessDemo
                 }
             }
         }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            firstNameInsText.Text = "";
+            lastNameInsText.Text = "";
+            emailAddressInsText.Text = "";
+            phoneNumberInsText.Text = "";
+        }
     }
 }

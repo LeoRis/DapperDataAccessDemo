@@ -44,6 +44,7 @@ namespace DapperDataAccessDemo
             this.insertRecordButton = new System.Windows.Forms.Button();
             this.removePersonButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // peopleFoundListBox
@@ -195,11 +196,22 @@ namespace DapperDataAccessDemo
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(239, 72);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(171, 44);
+            this.clearButton.TabIndex = 16;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 688);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.removePersonButton);
             this.Controls.Add(this.insertRecordButton);
@@ -241,6 +253,7 @@ namespace DapperDataAccessDemo
         private System.Windows.Forms.Button insertRecordButton;
         private System.Windows.Forms.Button removePersonButton;
         private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
