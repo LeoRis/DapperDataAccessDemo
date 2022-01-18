@@ -39,6 +39,8 @@ namespace DapperDataAccessDemo
             DataAccess db = new DataAccess();
 
             db.InsertPerson(firstNameInsText.Text, lastNameInsText.Text, emailAddressInsText.Text, phoneNumberInsText.Text);
+            
+            UpdateBinding();
 
             firstNameInsText.Text = "";
             lastNameInsText.Text = "";
@@ -51,6 +53,8 @@ namespace DapperDataAccessDemo
             DataAccess db = new DataAccess();
 
             db.DeletePerson(firstNameInsText.Text, lastNameInsText.Text, emailAddressInsText.Text, phoneNumberInsText.Text);
+
+            UpdateBinding();
 
             firstNameInsText.Text = "";
             lastNameInsText.Text = "";
@@ -66,6 +70,8 @@ namespace DapperDataAccessDemo
 
             db.UpdatePerson(firstNameInsText.Text, lastNameInsText.Text, emailAddressInsText.Text, phoneNumberInsText.Text);
 
+            UpdateBinding();
+
             firstNameInsText.Text = "";
             lastNameInsText.Text = "";
             emailAddressInsText.Text = "";
@@ -78,10 +84,12 @@ namespace DapperDataAccessDemo
             
             foreach(var person in people)
             {
-                if(person.FirstName == selector.FirstName && person.LastName == selector.LastName)
+                if(person.FirstName == selector.FirstName && person.LastName == selector.LastName && person.EmailAddress == selector.EmailAddress && person.PhoneNumber == selector.PhoneNumber)
                 {
                     firstNameInsText.Text = selector.FirstName;
                     lastNameInsText.Text = selector.LastName;
+                    emailAddressInsText.Text = selector.EmailAddress;
+                    phoneNumberInsText.Text = selector.PhoneNumber;
                 }
             }
         }
