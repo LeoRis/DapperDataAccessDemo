@@ -42,10 +42,7 @@ namespace DapperDataAccessDemo
             
             UpdateBinding();
 
-            firstNameInsText.Text = "";
-            lastNameInsText.Text = "";
-            emailAddressInsText.Text = "";
-            phoneNumberInsText.Text = "";
+            ClearInsertTextBox();
         }
 
         private void RemovePersonButton_Click(object sender, EventArgs e)
@@ -56,10 +53,7 @@ namespace DapperDataAccessDemo
 
             UpdateBinding();
 
-            firstNameInsText.Text = "";
-            lastNameInsText.Text = "";
-            emailAddressInsText.Text = "";
-            phoneNumberInsText.Text = "";
+            ClearInsertTextBox();
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
@@ -72,10 +66,7 @@ namespace DapperDataAccessDemo
 
             UpdateBinding();
 
-            firstNameInsText.Text = "";
-            lastNameInsText.Text = "";
-            emailAddressInsText.Text = "";
-            phoneNumberInsText.Text = "";
+            ClearInsertTextBox();
         }
 
         private void PeopleFoundListBox_SelectedValueChanged(object sender, EventArgs e)
@@ -95,6 +86,11 @@ namespace DapperDataAccessDemo
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
+        {
+            ClearInsertTextBox();
+        }
+
+        private void ClearInsertTextBox()
         {
             firstNameInsText.Text = "";
             lastNameInsText.Text = "";
